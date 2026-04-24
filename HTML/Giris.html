@@ -3,9 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Hakkımda</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="Giris.html" class="navbar-brand">Kişisel Web Sitem</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="CV.html" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="Sehir.html" class="nav-link">Şehrim</a></li>
+                    <li class="nav-item"><a href="Kulturel_Miras.html" class="nav-link">Kültürel Miraslar</a></li>
+                    <li class="nav-item"><a href="Ilgi_Alani.html" class="nav-link">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a href="Iletisim.html" class="nav-link">İletişim</a></li>
+                    <li class="nav-item"><a href="Login.html" class="nav-link">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero text-center text-white d-flex align-items-center">
+        <div class="container">
+            <h1>Merhaba, Ben Halil Aşık</h1>
+            <p class="lead">
+                Web Geliştirme ile uğraşıyorum.
+                <br>
+                HTML - CSS - JS - PHP alanlarında yetkinlik kazanmaya çalışıyorum.
+            </p>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="../img/profil.png" alt="Profil" class="img-fluid rounded shadow">
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm p-4">
+                    <h2 class="mb-3">Hakkımda</h2>
+                    <p class="text-muted">
+                        Herkese merhaba siteme hoşgeldiniz.
+                        Web teknolojileri dersi kapsamında kendimi geliştirmekte ve fullstack web alanında çalışmalar yapmaktayım.
+                        Yaklaşık 2 yıldır bu alanda projeler geliştiriyorum.
+                        Amacım yenilikçi ve üretken bir yazılımcı olmaktır.
+                    </p>
+
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <h6 class="fw-bold">Hobilerim</h6>
+                            <ul class="list-unstyled">
+                                <li>Kitap Okumak</li>
+                                <li>Bilgisayar Oyunu Oynamak</li>
+                                <li>Yüzmek</li>
+                                <li>Futbol</li>
+                                <li>Grafik Tasarım</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6">
+                            <h6 class="fw-bold">Etkinlikler</h6>
+                            <ul class="list-unstyled">
+                                <li>Yüzme Kulübü</li>
+                                <li>Web Tasarım</li>
+                                <li>Grafik Tasarım</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Medya</h2>
+            <p>Benimle ilgili kısa bir video</p>
+            <div class="ratio ratio-16x9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d-GySzumhSI?si=QILVFIyO0BloIIAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2026 - Tüm Hakları Saklıdır</p>
+        <div class="d-flex justify-content-center gap-4 mt-2">
+            <a href="https://www.youtube.com/" target="_blank" class="social-icon">
+                <i class="bi bi-youtube"></i> YouTube
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js" integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
