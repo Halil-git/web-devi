@@ -1,0 +1,24 @@
+.card-title {
+    font-weight: bold;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    aside {
+        margin-bottom: 20px;
+    }
+}
