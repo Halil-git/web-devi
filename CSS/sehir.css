@@ -3,14 +3,27 @@ body {
     background-color: #f8f9fa;
 }
 
-.navbar-nav .nav-link {
-    transition: 0.3s;
-    border-radius: 6px;
+.nav-link:hover {
+    color: #0d6efd;
 }
 
-.navbar-nav .nav-link:hover {
-    background-color: rgba(255,255,255,0.15);
-    padding-left: 10px;
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0d6efd;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
 }
 
 header {
@@ -42,6 +55,12 @@ header h1 {
 .owl-carousel h5 {
     margin-top: 10px;
     font-weight: 600;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    width: 40px;
+    font-size: 30px;
 }
 
 .card {
