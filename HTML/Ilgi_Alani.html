@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/ılgi.css">
+    <title>İlgi Alanlarım</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="Giris.html" class="navbar-brand">Kişisel Web Sitem</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="CV.html" class="nav-link">CV</a></li>
+                    <li class="nav-item"><a href="Sehir.html" class="nav-link">Şehrim</a></li>
+                    <li class="nav-item"><a href="Kulturel_Miras.html" class="nav-link">Kültürel Miraslar</a></li>
+                    <li class="nav-item"><a href="Ilgi_Alani.html" class="nav-link">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a href="Iletisim.html" class="nav-link">İletişim</a></li>
+                    <li class="nav-item"><a href="Login.html" class="nav-link">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white text-center p-4">
+        <h1>İlgi Alanlarım</h1>
+    </header>
+
+    <main class="container my-5">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab">
+                <button class="nav-link active" onclick="filmTab()">🎬 Filmler</button>
+                <button class="nav-link" onclick="futbolTab()">⚽️ Futbol</button>
+            </div>
+        </nav>
+
+        <section id="filmSection" class="mt-4">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Film ara...">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100" onclick="filmAra()">Ara</button>
+                </div>
+            </div>
+
+            <div class="row" id="filmListesi"></div>
+        </section>
+
+        <section id="futbolSection" class="mt-4 d-none">
+            <button class="btn btn-success mb-3" onclick="maclariGetir()">Son Maçlar</button>
+            <div class="row" id="macListesi"></div>
+        </section>
+    </main>
+
+    <footer class="text-center p-3 bg-light">
+        <p>© Tüm Hakları Saklıdır</p>
+    </footer>
+
+    <script src="../JS/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js" integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
