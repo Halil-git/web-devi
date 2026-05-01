@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,15 +43,15 @@
                     <form action="../PHP/iletisim.php" method="POST">
                         <div class="mb-3">
                             <label class="form-label">Ad Soyad</label>
-                            <input type="text" class="form-control" id="name" name="name">
+                            <input type="text" class="form-control" id="name" name="name" required v-model="name">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email">
+                            <input type="email" class="form-control" id="email" name="email" required v-model="email">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Telefon</label>
-                            <input type="text" class="form-control" id="phone" name="phone">
+                            <input type="text" class="form-control" id="phone" name="phone" required v-model="phone">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Cinsiyet</label><br>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Mesaj</label>
-                            <textarea name="message" id="message" class="form-control"></textarea>
+                            <textarea name="message" id="message" class="form-control" required v-model="message"></textarea>
                         </div>
                         <div class="d-flex gap-2">
                             <button type="button" class="btn btn-warning" onclick="validateJS()">JS Kontrol</button>
