@@ -2,20 +2,20 @@
 
 echo "<h2>Form Verileri</h2>";
 
-echo "Ad: " . $_POST["name"] . "<br>";
-echo "Email: " . $_POST["email"] . "<br>";
-echo "Telefon: " . $_POST["phone"] . "<br>";
-echo "Cinsiyet: " . $_POST["gender"] . "<br>";
+echo "Ad: " . htmlspecialchars($_POST["name"]) . "<br>";
+echo "Email: " . htmlspecialchars($_POST["email"]) . "<br>";
+echo "Telefon: " . htmlspecialchars($_POST["phone"]) . "<br>";
+echo "Cinsiyet: " . htmlspecialchars($_POST["gender"]) . "<br>";
 
 echo "İlgi Alanları: ";
 if(isset($_POST["interest"])) {
     foreach($_POST["interest"] as $i) {
-        echo $i . " ";
+        echo htmlspecialchars($i) . " ";
     }
 }
 
 echo "<br>";
-echo "Şehir: " . $_POST["city"] . "<br>";
-echo "Mesaj: " . $_POST["message"] . "<br>";
+echo "Şehir: " . htmlspecialchars($_POST["city"]) . "<br>";
+echo "Mesaj: " . htmlspecialchars($_POST["message"]) . "<br>";
 
 ?>
