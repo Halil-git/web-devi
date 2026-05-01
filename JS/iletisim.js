@@ -20,12 +20,14 @@ function  validateJS() {
 
 new Vue({
     el: '#app',
+    data: {
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    },
     methods: {
         validateVue() {
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let phone = document.getElementById("phone").value;
-
             let error = "";
             if(name.length < 3)
                 error += "Ad en az 3 karakter\n";
