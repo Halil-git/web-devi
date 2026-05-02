@@ -1,16 +1,26 @@
 .hero {
-    height: 70vh;
-    background: linear-gradient(135deg, #021A54,#427AB5);
+    height: 30vh;
+    background: linear-gradient(rgba(2,26,84,0.7), rgba(66,122,181,0.7));
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
     font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
 }
 
 img {
     max-height: 350px;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
 
 .nav-link {
@@ -30,4 +40,29 @@ img {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
 }
