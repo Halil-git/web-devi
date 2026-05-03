@@ -1,6 +1,14 @@
+html, body {
+    height: 100%;
+}
+
 body {
-    background-color: #f5f7fa;
-    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 .navbar-collapse .nav-link {
@@ -22,15 +30,31 @@ body {
     width: 100%;
 }
 
+.section-anim {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.4s ease;
+}
+
+.section-anim.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .card {
     border: none;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card-body h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 .card:hover {
-    transform: translateX(-8px);
+    transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
@@ -78,6 +102,15 @@ header {
 }
 
 footer {
-    font-size: 14px;
-    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
 }
