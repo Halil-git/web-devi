@@ -1,15 +1,16 @@
 function filmTab() {
-    document.getElementById("filmSection").classList.remove("d-none");
-    document.getElementById("futbolSection").classList.add("d-none");
+    document.getElementById("filmSection").classList.add("active");
+    document.getElementById("futbolSection").classList.remove("active");
 }
 
 function futbolTab() {
-    document.getElementById("filmSection").classList.add("d-none");
-    document.getElementById("futbolSection").classList.remove("d-none");
+    document.getElementById("filmSection").classList.remove("active");
+    document.getElementById("futbolSection").classList.add("active");
 }
 
 function filmAra() {
     const arama = document.getElementById("searchInput").value;
+    document.getElementById("onerilenFilmler").innerHTML="";
 
     fetch(`https://www.omdbapi.com/?s=${arama}&apikey=77429b05`)
         .then(res => res.json())
@@ -49,26 +50,46 @@ function maclariGetir() {
 
             data.events.slice(0,6).forEach(mac => {
                 alan.innerHTML += `
-                <article class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="${mac.strThumb}" class="card-img-top" alt="maç görseli">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                ${mac.strHomeTeam} vs ${mac.strAwayTeam}
-                            </h5>
-                            <p class="card-text">
-                                Skor: ${mac.intHomeScore} - ${mac.intAwayScore}
-                            </p>
-                            <p class="text-muted">
-                                Tarih: ${mac.dateEvent}
-                            </p>
-                        </div>
+                <div class="list-group mb-3">
+                    <div class="list-group-item">
+                        <h6>
+                            ${mac.strHomeTeam} vs ${mac.strAwayTeam}
+                            <span class="badge bg-danger ms-2">SON</span>
+                        </h6>
+                        <p>Skor: ${mac.intHomeScore} - ${mac.intAwayScore}</p>
+                        <small>${mac.dataEvent}</small>
                     </div>
-                </article>
+                </div>
                 `;
             });
         })
         .catch(err => {
             console.error("Hata:", err);
         })
+}
+
+function pupulerFilmler() {
+    fetch(`https://www.omdbapi.com/?s=batman&apikey=77429b05`)
+        .then(res => res.json())
+        .then(data => {
+            const alan = document.getElementById("onerilenFilmler");
+            alan.innerHTML = "<h4>⭐️ Önerilen Filmler</h4>";
+
+            data.Search.slice(0,6).forEach(film => {
+                alan.innerHTML += `
+                <article class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="${film.Poster}">
+                        <div class="card-body">
+                            <h6>${film.Title}</h6>
+                        </div>
+                    </div>
+                </aritcle>`;
+            });
+        });
+}
+
+window.onload = function() {
+    pupulerFilmler();
+    maclariGetir();
 }
