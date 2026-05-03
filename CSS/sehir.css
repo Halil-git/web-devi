@@ -1,8 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-}
-
 .nav-link:hover {
     color: #0d6efd;
 }
@@ -87,5 +82,15 @@ section h2 {
 }
 
 footer {
-    border-top: 3px solid #495057;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
 }
