@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/ilgi.css">
     <title>İlgi Alanlarım</title>
-</head>
+</head> 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -38,6 +38,7 @@
         <nav>
             <div class="nav nav-tabs" id="nav-tab">
                 <button class="nav-link active" onclick="filmTab()">🎬 Filmler</button>
+                <button class="nav-link" onclick="futbolTab()">⚽️ Futbol</button>
             </div>
         </nav>
 
@@ -53,6 +54,33 @@
 
             <div class="row" id="filmListesi"></div>
             <div class="row" id="onerilenFilmler"></div>
+        </section>
+
+        <section id="futbolSection" class="mt-4 section-anim">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <select id="ligSec" class="form-select">
+                        <option value="English Premier League">
+                            Premier League
+                        </option>
+                        <option value="Turkish Super Lig">
+                            Super League
+                        </option>
+                        <option value="Italian Serie A">
+                            Serie A
+                        </option>
+                        <option value="German Bundesliga">
+                            Bundesliga
+                        </option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-success w-100" onclick="ligTakimlariGetir()">
+                        Takımları Göster
+                    </button>
+                </div>
+            </div>
+            <div class="row" id="takimListesi"></div>
         </section>
     </main>
 
