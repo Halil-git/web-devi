@@ -116,3 +116,18 @@ footer a {
 footer a:hover {
     color: white;
 }
+
+#takimListesi .card img {
+    height: 220px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+#takimListesi .card {
+    transition: 0.3s ease;
+}
+
+#takimListesi .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
