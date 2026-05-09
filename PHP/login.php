@@ -1,7 +1,7 @@
 <?php
 
-$email = $_POST['email'] ?? '';
-$password = $_POST['password'] ?? '';
+$email = htmlspecialchars($_POST['email'] ?? '');
+$password = htmlspecialchars($_POST['password'] ?? '');
 
 $dogruEmail = "b2412100001@sakarya.edu.tr";
 $dogruSifre = "b2412100001";
@@ -16,7 +16,7 @@ if($email === $dogruEmail && $password === $dogruSifre) {
 
     echo "
     <!DOCTYPE html>
-    <html lang='en'>
+    <html lang='tr'>
     <head>
         <meta charset='UTF-8'>
         <title>Hoşgeldiniz</title>
