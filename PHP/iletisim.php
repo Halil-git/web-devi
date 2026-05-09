@@ -2,10 +2,17 @@
 
 echo "<h2>Form Verileri</h2>";
 
-echo "Ad: " . htmlspecialchars($_POST["name"]) . "<br>";
-echo "Email: " . htmlspecialchars($_POST["email"]) . "<br>";
-echo "Telefon: " . htmlspecialchars($_POST["phone"]) . "<br>";
-echo "Cinsiyet: " . htmlspecialchars($_POST["gender"]) . "<br>";
+$name = $_POST["name"] ?? "";
+$email = $_POST["email"] ?? "";
+$phone = $_POST["phone"] ?? "";
+$gender = $_POST["gender"] ?? "";
+$city = $_POST["city"] ?? "";
+$message = $_POST["message"] ?? "";
+
+echo "Ad: " . htmlspecialchars($name) . "<br>";
+echo "Email: " . htmlspecialchars($email) . "<br>";
+echo "Telefon: " . htmlspecialchars($phone) . "<br>";
+echo "Cinsiyet: " . htmlspecialchars($gender) . "<br>";
 
 echo "İlgi Alanları: ";
 if(isset($_POST["interest"])) {
@@ -15,7 +22,7 @@ if(isset($_POST["interest"])) {
 }
 
 echo "<br>";
-echo "Şehir: " . htmlspecialchars($_POST["city"]) . "<br>";
-echo "Mesaj: " . htmlspecialchars($_POST["message"]) . "<br>";
+echo "Şehir: " . htmlspecialchars($city) . "<br>";
+echo "Mesaj: " . htmlspecialchars($message) . "<br>";
 
 ?>
