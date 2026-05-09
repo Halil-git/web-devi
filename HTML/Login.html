@@ -24,7 +24,7 @@
                     <li class="nav-item"><a href="kulturelmiras.html" class="nav-link">Kültürel Miraslar</a></li>
                     <li class="nav-item"><a href="ilgialani.html" class="nav-link">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a href="iletisim.html" class="nav-link">İletişim</a></li>
-                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link active">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -50,14 +50,21 @@
                 </article>
 
                 <button type="submit" class="btn btn-primary w-100 mb-2">
-                    Giriş Yap (JS)
+                    Giriş Yap
+                </button>
+
+                <button type="button" class="btn btn-secondary w-100 mb-2" id="jsCheckBtn">
+                    JS ile Kontrol Et
                 </button>
 
                 <button type="button" class="btn btn-success w-100" @click="vueValidate">
                     Vue ile Kontrol Et
                 </button>
             </form>
-            <p id="error" class="text-danger mt-3 text-center">{{ error }}</p>
+
+            <p class="text-danger mt-3 text-center">{{ error }}</p>
+            <p id="error" class="text-danger text-center"></p>
+            <p id="jsError" class="text-danger text-center"></p>
         </section>
     </main>
 
