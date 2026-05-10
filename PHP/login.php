@@ -7,7 +7,7 @@ $dogruEmail = "b2412100001@sakarya.edu.tr";
 $dogruSifre = "b2412100001";
 
 if(empty($email) || empty($password)) {
-    header("Location: login.html?error=bos");
+    header("Location: ../HTML/login.html?error=bos");
     exit();
 }
 
@@ -23,13 +23,18 @@ if($email === $dogruEmail && $password === $dogruSifre) {
         <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
     </head>
     <body class='d-flex justify-content-center align-items-center vh-100'>
-        <div class='text-center'>
+        <div class='card p-5 text-center shadow'>
             <h1 class='text-success'>Hoşgeldiniz $ogrNo</h1>
+            <p class='mt-3'>Giriş başarılı.</p>
+
+            <a href='../HTML/giris.html' class='btn btn-primary mt-3'>
+                Ana Sayfaya Dön
+            </a>
         </div>
     </body>
     </html>
     ";
 } else {
-    header("Location: login.html?error=hatali");
+    header("Location: ../HTML/login.html?error=hatali");
     exit();
 }
