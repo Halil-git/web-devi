@@ -3,8 +3,8 @@
 $email = htmlspecialchars($_POST['email'] ?? '');
 $password = htmlspecialchars($_POST['password'] ?? '');
 
-$dogruEmail = "b2412100001@sakarya.edu.tr";
-$dogruSifre = "b2412100001";
+$dogruEmail = "b231210043@sakarya.edu.tr";
+$dogruSifre = "b231210043";
 
 if(empty($email) || empty($password)) {
     header("Location: ../HTML/login.html?error=bos");
